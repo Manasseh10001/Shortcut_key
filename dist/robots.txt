@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /favorites
+Sitemap: https://shortcutssheet.com/sitemap.xml

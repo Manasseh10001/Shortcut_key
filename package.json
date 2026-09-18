@@ -1,0 +1,9 @@
+{
+  "name": "shortcutssheet",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/generate-static-site.mjs",
+    "start": "node --env-file-if-exists=.env server.mjs"
+  }
+}
