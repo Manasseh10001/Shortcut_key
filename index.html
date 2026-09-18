@@ -1,153 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
-    rel="stylesheet"
-  />
-
-  <title>ShortcutSheet — Keyboard Shortcuts for Everyday Apps</title>
-
-  <meta
-    name="description"
-    content="Find keyboard shortcuts for hundreds of apps on macOS and Windows. Search, save favorites, and practice what you use."
-  />
-
-  <meta name="robots" content="index,follow" />
-
-  <meta property="og:type" content="website" />
-  <meta
-    property="og:title"
-    content="ShortcutSheet — Keyboard Shortcuts for Everyday Apps"
-  />
-  <meta
-    property="og:description"
-    content="Find keyboard shortcuts for hundreds of apps on macOS and Windows."
-  />
-
-  <link
-    rel="canonical"
-    href="https://manasseh10001.github.io/Shortcut_key/"
-  />
-
-  <link
-    rel="icon"
-    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⌨️</text></svg>"
-  />
-
-  <!-- ShortcutSheet CSS -->
-  <link rel="stylesheet" href="./styles.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<title>ShortcutSheet — Keyboard Shortcuts for Everyday Apps</title>
+<meta name="description" content="Find keyboard shortcuts for hundreds of apps on macOS and Windows. Search, save favorites, and practice what you use." />
+<meta name="robots" content="index,follow" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="ShortcutSheet — Keyboard Shortcuts for Everyday Apps" />
+<meta property="og:description" content="Find keyboard shortcuts for hundreds of apps on macOS and Windows." />
+<link rel="canonical" href="/" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⌨️</text></svg>" />
+<link rel="stylesheet" href="/styles.css" />
 </head>
-
 <body class="shortcut-ai">
 
   <header class="topbar">
     <div class="topbar-inner">
-
-      <button class="brand" onclick="KS.nav('./')">
-        <span class="brand-mark">⌘</span>
-        ShortcutSheet
+      <button class="brand" onclick="KS.nav('/')">
+        <span class="brand-mark">⌘</span> ShortcutSheet
       </button>
-
       <nav class="nav" id="nav-links">
-
-        <button
-          id="nav-home"
-          onclick="KS.nav('./')"
-        >
-          Home
-        </button>
-
-        <button
-          id="nav-directory"
-          onclick="KS.nav('./apps')"
-        >
-          Apps
-        </button>
-
-        <button
-          id="nav-learn"
-          onclick="KS.nav('./learn')"
-        >
-          Learn
-        </button>
-
-        <button
-          id="nav-favorites"
-          onclick="KS.nav('./favorites')"
-        >
-          Favorites
-          <span id="fav-count" class="nav-badge"></span>
-        </button>
-
+        <button id="nav-home" onclick="KS.nav('/')">Home</button>
+        <button id="nav-directory" onclick="KS.nav('/apps')">Apps</button>
+        <button id="nav-learn" onclick="KS.nav('/learn')">Learn</button>
+        <button id="nav-favorites" onclick="KS.nav('/favorites')">Favorites<span id="fav-count" class="nav-badge"></span></button>
       </nav>
-
       <div class="topbar-actions">
-
-        <button
-          class="icon-btn search-trigger"
-          onclick="KS.openPalette()"
-          aria-label="Search"
-        >
-          🔍
-          <span class="search-trigger-kbd">⌘K</span>
+        <button class="icon-btn search-trigger" onclick="KS.openPalette()" aria-label="Search">
+          🔍 <span class="search-trigger-kbd">⌘K</span>
         </button>
-
         <span id="platform-toggle-top"></span>
-
-        <button
-          class="icon-btn"
-          onclick="KS.setTheme(document.body.classList.contains('dark') ? 'light' : 'dark')"
-          aria-label="Toggle theme"
-        >
-          🌓
-        </button>
-
-        <button
-          class="icon-btn nav-toggle"
-          onclick="KS.toggleNav()"
-          aria-label="Menu"
-        >
-          ☰
-        </button>
-
+        <button class="icon-btn" onclick="KS.setTheme(document.body.classList.contains('dark') ? 'light' : 'dark')" aria-label="Toggle theme">🌓</button>
+        <button class="icon-btn nav-toggle" onclick="KS.toggleNav()" aria-label="Menu">☰</button>
       </div>
-
     </div>
   </header>
 
   <main class="main" id="main"></main>
 
   <footer class="site-footer">
-
-    <span>
-      ShortcutSheet — a shortcut reference and learning tool.
-    </span>
-
-    <span>
-      <a href="./about">About</a>
-      ·
-      <a href="./contact">Contact</a>
-      ·
-      <a href="./privacy">Privacy</a>
-      ·
-      <a href="./terms">Terms</a>
-      ·
-      <a href="./admin">Admin</a>
-    </span>
-
+    <span>ShortcutSheet — a shortcut reference and learning tool.</span>
+    <span><a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/admin">Admin</a></span>
   </footer>
 
   <div id="palette-root"></div>
 
-  <!-- ShortcutSheet JavaScript -->
-  <script type="module" src="./app.js"></script>
-
+  <script type="module" src="/app.js"></script>
 </body>
 </html>
